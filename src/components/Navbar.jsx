@@ -62,13 +62,21 @@ function Navbar() {
             <li>
               <NavLink to={"/all-craft"}>All Art & craft</NavLink>
             </li>
-            <li>
-              <NavLink to={"/add-craft"}>Add Craft</NavLink>
-            </li>
-
-            <li>
-              <NavLink to={"/register"}>Register</NavLink>
-            </li>
+            {user && (
+              <>
+                <li>
+                  <NavLink to={"/add-craft"}>Add Craft</NavLink>
+                </li>
+                <li>
+                  <NavLink to={"/my-art-list"}>My Art & Craft List</NavLink>
+                </li>
+              </>
+            )}
+            {!user && (
+              <li>
+                <NavLink to={"/register"}>Register</NavLink>
+              </li>
+            )}
           </ul>
         </div>
         {user ? (

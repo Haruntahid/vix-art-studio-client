@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 function AddCraft() {
+  const { user } = useContext(AuthContext);
+
   //handel addcraft
   const handelAddCraft = (event) => {
     event.preventDefault();
@@ -29,18 +33,18 @@ function AddCraft() {
       email,
     };
 
-    console.log(
-      photo,
-      item_name,
-      subcategory_name,
-      short_description,
-      price,
-      rating,
-      customization,
-      processing_time,
-      stockStatus,
-      email
-    );
+    // console.log(
+    //   photo,
+    //   item_name,
+    //   subcategory_name,
+    //   short_description,
+    //   price,
+    //   rating,
+    //   customization,
+    //   processing_time,
+    //   stockStatus,
+    //   email
+    // );
     fetch("http://localhost:5000/crafts", {
       method: "POST",
       headers: {
@@ -182,7 +186,9 @@ function AddCraft() {
                 placeholder="Email"
                 type="email"
                 name="email"
+                value={user.email}
                 className="input input-bordered w-full"
+                readOnly
               />
             </div>
           </div>
