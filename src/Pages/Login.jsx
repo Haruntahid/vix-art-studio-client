@@ -9,9 +9,9 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 
 function Login() {
+  const { loginUser, googleLogin, setUser } = useContext(AuthContext);
   const [error, setError] = useState("");
   const location = useLocation();
-  const { loginUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // passToogle
@@ -52,6 +52,15 @@ function Login() {
           )
         )
       );
+  };
+
+  //   google login
+  const handelGoogleLogin = () => {
+    googleLogin().then((result) => {
+      setUser(result.user);
+      navigate(location?.state ? location.state : "/");
+      toast.success("Log in successfully");
+    });
   };
 
   return (
@@ -111,7 +120,7 @@ function Login() {
             <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
           </div>
           <div className="flex justify-center space-x-4">
-            <button className="p-3 rounded-sm">
+            <button onClick={handelGoogleLogin} className="p-3 rounded-sm">
               <FaGoogle size={22} />
             </button>
             <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
