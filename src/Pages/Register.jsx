@@ -12,7 +12,7 @@ function Register() {
           <h1 className="text-2xl font-bold text-center">Register</h1>
           <form noValidate="" action="" className="space-y-6">
             <div className="space-y-1 text-sm">
-              <labe className="block text-gray-400">Name</labe>
+              <label className="block text-gray-400">Name</label>
               <label className="input input-bordered flex items-center gap-2">
                 <FaUser />
                 <input type="text" className="grow" placeholder="Name" />
