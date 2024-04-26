@@ -1,6 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import { useContext } from "react";
 
 function Navbar() {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user?.displayName);
+
+  const handelLogout = () => {
+    logOut();
+  };
+
   return (
     <>
       <div className="navbar bg-rose-500">
@@ -60,11 +69,33 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <Link to={"/login"} className="btn">
-            Login
-          </Link>
-        </div>
+        {user ? (
+          <div className="navbar-end">
+            <div>
+              <div className="mr-5">
+                <div
+                  className="tooltip tooltip-left"
+                  data-tip={user?.displayName}
+                >
+                  <img
+                    className="w-14 h-14 rounded-full"
+                    src={user?.photoURL}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <Link onClick={handelLogout} className="btn">
+              Logout
+            </Link>
+          </div>
+        ) : (
+          <div className="navbar-end">
+            <Link to={"/login"} className="btn">
+              Login
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );
