@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-function MyArtCraftBox({ craft }) {
+function MyArtCraftBox({ craft, crafts, setCrafts }) {
   const {
     _id,
     photo,
@@ -12,6 +13,40 @@ function MyArtCraftBox({ craft }) {
     customization,
     stockStatus,
   } = craft;
+
+  //   delete operation
+  const handelDelete = (_id) => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/crafts/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your Crafts has been deleted.",
+                icon: "success",
+              });
+            }
+            const remaining = crafts.filter((cofe) => cofe._id !== _id);
+            setCrafts(remaining);
+            console.log(data);
+          });
+      }
+    });
+  };
+
   return (
     <>
       <div className="card bg-rose-100 hover:bg-rose-500 transition hover:duration-1000 hover:text-white ease-in-out shadow-xl p-5">
@@ -27,9 +62,15 @@ function MyArtCraftBox({ craft }) {
           <p>Price: {price}$</p>
           <p>Customization: {customization}</p>
           <p>Stock Status: {stockStatus}</p>
-          <div className="card-actions justify-center">
+          <div className="card-actions">
             <Link to={`/craft/${_id}`} className="btn btn-primary">
               View Details
+            </Link>
+            <Link
+              onClick={() => handelDelete(_id)}
+              className="btn btn-secondary"
+            >
+              Delete
             </Link>
           </div>
         </div>
@@ -40,6 +81,8 @@ function MyArtCraftBox({ craft }) {
 
 MyArtCraftBox.propTypes = {
   craft: PropTypes.object,
+  crafts: PropTypes.array,
+  setCrafts: PropTypes.func,
 };
 
 export default MyArtCraftBox;

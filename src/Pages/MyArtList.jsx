@@ -22,7 +22,12 @@ function MyArtList() {
         </h2>
         <div className="grid grid-cols-2 gap-10">
           {crafts.map((craft) => (
-            <MyArtCraftBox key={craft._id} craft={craft} />
+            <MyArtCraftBox
+              key={craft._id}
+              craft={craft}
+              setCrafts={setCrafts}
+              crafts={crafts}
+            />
           ))}
         </div>
       </div>

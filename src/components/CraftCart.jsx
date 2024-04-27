@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function CraftCart({ craft }) {
-  console.log(craft);
   const { _id, photo, item_name, subcategory_name, price, rating } = craft;
   return (
     <>
