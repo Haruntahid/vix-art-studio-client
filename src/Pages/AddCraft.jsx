@@ -19,8 +19,10 @@ function AddCraft() {
     const processing_time = form.processing_time.value;
     const stockStatus = form.stockStatus.value;
     const email = form.email.value;
+    const name = form.name.value;
 
     const addCraft = {
+      name,
       photo,
       item_name,
       subcategory_name,
@@ -59,6 +61,31 @@ function AddCraft() {
       <h2 className="text-5xl font-bold text-center mb-10">Add Craft</h2>
       <div className="container mx-auto bg-gray-800 p-5 rounded-lg">
         <form onSubmit={handelAddCraft} className="space-y-6">
+          {/* user row*/}
+          <div className="flex gap-5">
+            <div className="w-1/2">
+              <label className="text-white block mb-2">Name:</label>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                defaultValue={user.displayName}
+                readOnly
+                className="input input-bordered w-full"
+              />
+            </div>
+            <div className="w-1/2">
+              <label className="text-white block mb-2">Email:</label>
+              <input
+                placeholder="Email"
+                type="email"
+                name="email"
+                value={user.email}
+                className="input input-bordered w-full"
+                readOnly
+              />
+            </div>
+          </div>
           {/* row 1 */}
           <div className="flex gap-5">
             <div className="w-1/2">
@@ -92,20 +119,6 @@ function AddCraft() {
               />
             </div>
             <div className="w-1/2">
-              <label className="text-white block mb-2">
-                Short Description:
-              </label>
-              <input
-                placeholder="Short description"
-                type="text"
-                name="short_description"
-                className="input input-bordered w-full"
-              />
-            </div>
-          </div>
-          {/* row 3 */}
-          <div className="flex gap-5">
-            <div className="w-1/2">
               <label className="text-white block mb-2">Price:</label>
               <input
                 placeholder="Price"
@@ -114,6 +127,9 @@ function AddCraft() {
                 className="input input-bordered w-full"
               />
             </div>
+          </div>
+          {/* row 3 */}
+          <div className="flex gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Rating:</label>
               <input
@@ -123,9 +139,6 @@ function AddCraft() {
                 className="input input-bordered w-full"
               />
             </div>
-          </div>
-          {/* row-4 */}
-          <div className="flex gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Customization:</label>
               <select
@@ -141,6 +154,9 @@ function AddCraft() {
                 </option>
               </select>
             </div>
+          </div>
+          {/* row-4 */}
+          <div className="flex gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Processing Time:</label>
               <input
@@ -150,9 +166,6 @@ function AddCraft() {
                 className="input input-bordered w-full"
               />
             </div>
-          </div>
-          {/* row-5 */}
-          <div className="flex gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Stock Status:</label>
               <select
@@ -168,18 +181,18 @@ function AddCraft() {
                 </option>
               </select>
             </div>
-            <div className="w-1/2">
-              <label className="text-white block mb-2">User Email:</label>
-              <input
-                placeholder="Email"
-                type="email"
-                name="email"
-                value={user.email}
-                className="input input-bordered w-full"
-                readOnly
-              />
-            </div>
           </div>
+          {/* row-5 */}
+          <div className="w-full">
+            <label className="text-white block mb-2">Short Description:</label>
+            <textarea
+              placeholder="Short description"
+              type="text"
+              name="short_description"
+              className="input input-bordered w-full py-2"
+            ></textarea>
+          </div>
+
           <div className="text-center">
             <input
               className="btn px-6 py-2 rounded-lg bg-rose-600 hover:bg-inherit border border-rose-600 hover:text-white"
