@@ -172,10 +172,10 @@ function AddCraft() {
                 name="stockStatus"
                 className="block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500"
               >
-                <option value="- In stock" className="py-2">
+                <option value="In stock" className="py-2">
                   - In stock
                 </option>
-                <option value="- Made to Order" className="py-2">
+                <option value="Made to Order" className="py-2">
                   - Made to Order
                 </option>
               </select>
