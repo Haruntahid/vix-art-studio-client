@@ -12,9 +12,11 @@ function CraftItems() {
 
   return (
     <>
-      <div className="container mx-auto mt-10">
-        <h2 className="text-center text-5xl font-bold">Craft Items</h2>
-        <div className="grid grid-cols-3 gap-6 lg:mt-16">
+      <div className="container mx-auto">
+        <h2 className="text-center text-3xl my-5 lg:my-10 lg:text-5xl font-bold">
+          Craft Items
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mt-16">
           {crafts.slice(0, 6).map((craft) => (
             <CraftCart key={craft._id} craft={craft} />
           ))}

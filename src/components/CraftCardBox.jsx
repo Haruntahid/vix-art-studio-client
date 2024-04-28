@@ -14,35 +14,37 @@ function CraftCardBox({ craft }) {
   } = craft;
   return (
     <>
-      <div className="flex p-5 bg-rose-400 mb-5 rounded-lg gap-6">
+      <div className="flex flex-col lg:flex-row p-5 bg-rose-300 mb-3 lg:mb-5 rounded-lg gap-3 lg:gap-6">
         <div>
           <img
-            className="w-[300px] h-[200px] rounded-lg"
+            className="w-full object-cover lg:w-[300px] h-[200px] lg:h-[220px] rounded-lg"
             src={photo}
             alt={item_name}
           />
         </div>
         <div>
-          <p className="text-2xl">
+          <p className="text-xl lg:text-2xl">
             <span className="font-semibold">Craft Name:</span> {item_name}
           </p>
-          <p className="text-xl">
+          <p className="lg:text-xl">
             <span className="font-semibold">Category Name:</span>{" "}
             {subcategory_name}
           </p>
-          <p className="text-xl">
+          <p className="lg:text-xl">
             <span className="font-semibold">Processing Time:</span>{" "}
             {processing_time}
           </p>
-          <p className="text-xl">
+          <p className="lg:text-xl">
             <span className="font-semibold">Rating:</span> {rating}
           </p>
-          <p className="text-xl">
+          <p className="lg:text-xl">
             <span className="font-semibold">Price:</span> {price} $
           </p>
-          <Link to={`/craft/${_id}`} className="btn">
-            View Details
-          </Link>
+          <div className="text-center lg:text-left">
+            <Link to={`/craft/${_id}`} className="btn mt-3 lg:mt-5">
+              View Details
+            </Link>
+          </div>
         </div>
       </div>
     </>

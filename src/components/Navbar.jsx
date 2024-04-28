@@ -59,16 +59,30 @@ function Navbar() {
               <li>
                 <NavLink to={"/all-craft"}>All Art & craft</NavLink>
               </li>
-              <li>
-                <NavLink to={"/add-craft"}>Add Craft</NavLink>
-              </li>
+              {user && (
+                <>
+                  <li>
+                    <NavLink to={"/add-craft"}>Add Craft</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to={"/my-art-list"}>My Art & Craft List</NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="btn bg-rose-400" onClick={handelLogout}>
+                      Logout
+                    </NavLink>
+                  </li>
+                </>
+              )}
 
-              <li>
-                <NavLink to={"/register"}>Register</NavLink>
-              </li>
+              {!user && (
+                <li>
+                  <NavLink to={"/register"}>Register</NavLink>
+                </li>
+              )}
             </ul>
           </div>
-          <Link to={"/"} className="btn btn-ghost text-3xl">
+          <Link to={"/"} className="btn btn-ghost text-xl lg:text-3xl">
             Vix art studio
           </Link>
         </div>
@@ -100,7 +114,7 @@ function Navbar() {
         {user ? (
           <div className="navbar-end">
             {/* toogle dark mode btn */}
-            <label className="swap swap-rotate mr-5">
+            <label className="swap swap-rotate mr-2 lg:mr-5">
               {/* this hidden checkbox controls the state */}
               <input
                 type="checkbox"
@@ -140,9 +154,11 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <Link onClick={handelLogout} className="btn">
-              Logout
-            </Link>
+            <div className="hidden lg:block">
+              <Link onClick={handelLogout} className="btn">
+                Logout
+              </Link>
+            </div>
           </div>
         ) : (
           <div className="navbar-end">

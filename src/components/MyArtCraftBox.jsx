@@ -52,7 +52,7 @@ function MyArtCraftBox({ craft, crafts, setCrafts }) {
     <>
       <div className="card bg-rose-100 hover:bg-rose-500 transition hover:duration-1000 hover:text-white ease-in-out shadow-xl p-5">
         <img
-          className="rounded-xl h-[400px] object-cover"
+          className="rounded-xl h-[250px] lg:h-[400px] object-cover"
           src={photo}
           alt={item_name}
         />

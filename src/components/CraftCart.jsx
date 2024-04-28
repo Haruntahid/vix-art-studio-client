@@ -5,7 +5,7 @@ function CraftCart({ craft }) {
   const { _id, photo, item_name, subcategory_name, price, rating } = craft;
   return (
     <>
-      <div className="card bg-rose-100 hover:bg-rose-500 transition hover:duration-1000 hover:text-white ease-in-out shadow-xl p-5">
+      <div className="card bg-rose-50 hover:bg-rose-500 transition hover:duration-800 hover:text-white ease-in-out shadow-xl p-5">
         <img className="rounded-xl h-[300px]" src={photo} alt={item_name} />
         <div className="space-y-2 mt-3">
           <h2 className="card-title">Item Name: {item_name}</h2>

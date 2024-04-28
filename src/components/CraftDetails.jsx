@@ -18,7 +18,7 @@ function CraftDetails() {
   return (
     <>
       <div className="container mx-auto">
-        <div className="flex gap-10 mt-10">
+        <div className="flex p-2 flex-col lg:flex-row gap-5 lg:gap-10 mt-10">
           <div className="w-full lg:w-2/4 border-2 p-5 border-rose-500 rounded-lg">
             <img
               src={photo}
@@ -27,10 +27,10 @@ function CraftDetails() {
             />
           </div>
           <div>
-            <h2 className="text-4xl">
+            <h2 className="text-2xl lg:text-4xl">
               <span className="font-semibold">Craft Name :</span> {item_name}
             </h2>
-            <h2 className="text-2xl mt-5 text-white px-6 py-1 bg-rose-500 rounded-full inline-block">
+            <h2 className="  lg:text-2xl mt-5 text-white px-6 py-1 bg-rose-500 rounded-full inline-block">
               <span className="font-semibold">Category :</span>{" "}
               {subcategory_name}
             </h2>
@@ -38,20 +38,26 @@ function CraftDetails() {
               <p className="text-4xl font-bold text-center">Details</p>
             </div>
 
-            <div className="grid grid-cols-3 gap-5 items-center">
-              <h2 className="text-4xl font-bold inline-flex flex-col-reverse items-center bg-green-400 p-5 min-h-44 justify-center">
-                <span className="font-semibold text-2xl">Price</span> {price}$
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 items-center">
+              <h2 className="text-2xl lg:text-4xl font-bold inline-flex flex-col-reverse items-center bg-green-400 p-5 min-h-24 lg:min-h-44 justify-center">
+                <span className="font-semibold text-xl lg:text-2xl">Price</span>{" "}
+                {price}$
               </h2>
-              <h2 className="text-4xl font-bold inline-flex flex-col-reverse items-center bg-yellow-400 p-5 min-h-44 justify-center">
-                <span className="font-semibold  text-2xl">Rating</span> {rating}
+              <h2 className="text-2xl lg:text-4xl font-bold inline-flex flex-col-reverse items-center bg-yellow-400 p-5 min-h-24 lg:min-h-44 justify-center">
+                <span className="font-semibold text-xl lg:text-2xl">
+                  Rating
+                </span>{" "}
+                {rating}
               </h2>
-              <h2 className="text-4xl font-bold inline-flex flex-col-reverse items-center bg-blue-400 p-5 min-h-44 justify-center">
-                <span className="font-semibold text-2xl">Processing Time</span>{" "}
+              <h2 className="text-2xl lg:text-4xl font-bold inline-flex col-span-2 lg:col-span-1 flex-col-reverse items-center bg-blue-400 p-5 min-h-24 lg:min-h-44 justify-center">
+                <span className="font-semibold text-xl lg:text-2xl">
+                  Processing Time
+                </span>{" "}
                 {processing_time}
               </h2>
             </div>
             <div className="divider"></div>
-            <h2 className="text-2xl text-gray-400">
+            <h2 className="text-xl lg:text-2xl text-gray-400">
               <span className="font-semibold text-black">Stock Status :</span>{" "}
               {stockStatus}
             </h2>
@@ -78,7 +84,7 @@ function CraftDetails() {
               <span className="font-semibold text-black">Email :</span> {email}
             </h2>
             <div className="divider"></div>
-            <h2 className="text-2xl text-gray-400">
+            <h2 className="text-xl lg:text-2xl text-gray-400">
               <span className="font-semibold text-black">Description :</span>{" "}
               {short_description}
             </h2>

@@ -76,13 +76,13 @@ function AddCraft() {
 
   return (
     <>
-      <h2 className="text-6xl text-amber-900 font-bold text-center my-10">
+      <h2 className="text-3xl lg:text-6xl text-amber-900 font-bold text-center my-5 lg:my-10">
         Add Craft
       </h2>
       <div className="container mx-auto bg-gray-800 p-5 rounded-lg">
-        <form onSubmit={handelAddCraft} className="space-y-6">
+        <form onSubmit={handelAddCraft} className="space-y-2 lg:space-y-6">
           {/* user row*/}
-          <div className="flex gap-5">
+          <div className="flex gap-2 lg:gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Name:</label>
               <input
@@ -107,7 +107,7 @@ function AddCraft() {
             </div>
           </div>
           {/* row 1 */}
-          <div className="flex gap-5">
+          <div className="flex gap-2 lg:gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">PhotoURL:</label>
               <input
@@ -128,7 +128,7 @@ function AddCraft() {
             </div>
           </div>
           {/* row 2 */}
-          <div className="flex gap-5">
+          <div className="flex gap-2 lg:gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Subcategory Name:</label>
               <input
@@ -149,7 +149,7 @@ function AddCraft() {
             </div>
           </div>
           {/* row 3 */}
-          <div className="flex gap-5">
+          <div className="flex gap-2 lg:gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Rating:</label>
               <input
@@ -176,7 +176,7 @@ function AddCraft() {
             </div>
           </div>
           {/* row-4 */}
-          <div className="flex gap-5">
+          <div className="flex gap-2 lg:gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Processing Time:</label>
               <input
@@ -215,7 +215,7 @@ function AddCraft() {
 
           <div className="text-center">
             <input
-              className="btn px-6 py-2 rounded-lg bg-rose-600 hover:bg-inherit border border-rose-600 hover:text-white"
+              className="btn px-6 py-2 rounded-lg w-full lg:w-60 mt-5 bg-rose-600 hover:bg-inherit border border-rose-600 hover:text-white"
               type="submit"
               value="Add"
             />

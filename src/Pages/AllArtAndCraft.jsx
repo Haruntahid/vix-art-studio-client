@@ -7,12 +7,14 @@ function AllArtAndCraft() {
   return (
     <>
       <div className="container mx-auto">
-        <h2 className="text-6xl text-amber-900 font-bold text-center my-10">
+        <h2 className="text-3xl lg:text-6xl text-amber-900 font-bold text-center my-5 lg:my-10">
           All art and crafts
         </h2>
-        {crafts.map((craft) => (
-          <CraftCardBox key={craft._id} craft={craft} />
-        ))}
+        <div className="grid md:grid-cols-2 gap-5">
+          {crafts.map((craft) => (
+            <CraftCardBox key={craft._id} craft={craft} />
+          ))}
+        </div>
       </div>
     </>
   );

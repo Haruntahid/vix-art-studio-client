@@ -77,7 +77,9 @@ function UpdateCraft() {
 
   return (
     <>
-      <h2 className="text-5xl font-bold text-center mb-10">Update Craft</h2>
+      <h2 className="text-3xl lg:text-6xl font-bold text-amber-900 text-center my-5 lg:my-10">
+        Update Craft
+      </h2>
       <div className="container mx-auto bg-gray-800 p-5 rounded-lg">
         <form onSubmit={handelUpdateCraft} className="space-y-6">
           {/* row 1 */}
@@ -199,7 +201,7 @@ function UpdateCraft() {
 
           <div className="text-center">
             <input
-              className="btn px-6 py-2 rounded-lg bg-rose-600 hover:bg-inherit border border-rose-600 hover:text-white"
+              className="btn px-6 py-2 mt-5 w-full lg:w-60 rounded-lg bg-rose-600 hover:bg-inherit border border-rose-600 hover:text-white"
               type="submit"
               value="Update"
             />

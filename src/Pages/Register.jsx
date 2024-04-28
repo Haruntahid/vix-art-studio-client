@@ -91,8 +91,8 @@ function Register() {
 
   return (
     <>
-      <div className="container mx-auto flex items-center justify-center">
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-800 text-gray-500 ">
+      <div className="container mx-auto flex items-center justify-center h-[70vh] lg:h-[80vh] p-2 lg:p-0">
+        <div className="w-full max-w-md p-4 lg:p-8 space-y-3 rounded-xl bg-gray-800 text-gray-500 ">
           <h1 className="text-2xl font-bold text-center">Register</h1>
           <form onSubmit={handelRegister} className="space-y-6">
             <div className="space-y-1 text-sm">

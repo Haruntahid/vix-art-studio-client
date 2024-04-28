@@ -20,24 +20,25 @@ function Banner() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
+        style={{ zIndex: "-100" }}
       >
         <SwiperSlide>
           <img
-            className="w-full"
+            className="w-full h-[300px] lg:h-auto object-cover"
             src="https://i.ibb.co/Jz86pXc/Craft-Planet-Web-Banner.jpg"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full"
+            className="w-full h-[300px] lg:h-auto object-cover"
             src="https://i.ibb.co/Xp18gPc/Artiste-Web-Banner.jpg"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full"
+            className="w-full h-[300px] lg:h-auto object-cover"
             src="https://i.ibb.co/kQDXP5W/Faber-Castell-Web-Banner.jpg"
             alt=""
           />
