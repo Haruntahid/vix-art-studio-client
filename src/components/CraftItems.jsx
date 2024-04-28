@@ -15,7 +15,7 @@ function CraftItems() {
       <div className="container mx-auto mt-10">
         <h2 className="text-center text-5xl font-bold">Craft Items</h2>
         <div className="grid grid-cols-3 gap-6 lg:mt-16">
-          {crafts.map((craft) => (
+          {crafts.slice(0, 6).map((craft) => (
             <CraftCart key={craft._id} craft={craft} />
           ))}
         </div>

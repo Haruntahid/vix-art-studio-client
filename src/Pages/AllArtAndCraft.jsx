@@ -7,7 +7,7 @@ function AllArtAndCraft() {
   return (
     <>
       <div className="container mx-auto">
-        <h2 className="text-5xl font-bold text-center my-10">
+        <h2 className="text-6xl text-amber-900 font-bold text-center my-10">
           All art and crafts
         </h2>
         {crafts.map((craft) => (

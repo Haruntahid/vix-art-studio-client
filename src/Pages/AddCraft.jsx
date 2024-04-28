@@ -76,7 +76,9 @@ function AddCraft() {
 
   return (
     <>
-      <h2 className="text-5xl font-bold text-center mb-10">Add Craft</h2>
+      <h2 className="text-6xl text-amber-900 font-bold text-center my-10">
+        Add Craft
+      </h2>
       <div className="container mx-auto bg-gray-800 p-5 rounded-lg">
         <form onSubmit={handelAddCraft} className="space-y-6">
           {/* user row*/}

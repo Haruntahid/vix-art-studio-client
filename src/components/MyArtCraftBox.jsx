@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { MdDelete } from "react-icons/md";
 
 function MyArtCraftBox({ craft, crafts, setCrafts }) {
   const {
@@ -70,7 +71,7 @@ function MyArtCraftBox({ craft, crafts, setCrafts }) {
               onClick={() => handelDelete(_id)}
               className="btn btn-secondary"
             >
-              Delete
+              <MdDelete size={30} />
             </Link>
           </div>
         </div>

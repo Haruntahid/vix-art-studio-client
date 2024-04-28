@@ -17,7 +17,7 @@ function MyArtList() {
   return (
     <>
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center my-10">
+        <h2 className="text-6xl text-amber-900 font-bold text-center my-10">
           Your Total Art & Crafts: {crafts.length}
         </h2>
         <div className="grid grid-cols-2 gap-10">
