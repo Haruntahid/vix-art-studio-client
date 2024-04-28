@@ -20,7 +20,7 @@ function Banner() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
-        style={{ zIndex: "-100" }}
+        style={{ zIndex: "-1" }}
       >
         <SwiperSlide>
           <img
