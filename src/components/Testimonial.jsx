@@ -34,7 +34,7 @@ function Testimonial() {
                   className="w-20 h-20 rounded-full bg-gray-500"
                 />
                 <blockquote className="max-w-lg text-lg italic font-medium text-center">
-                  Found the perfect gift at Vix Art Villa. The artwork is
+                  Found the perfect gift at Vix Art Studio. The artwork is
                   stunning and arrived beautifully packaged. Thank you for a
                   delightful shopping experience!
                 </blockquote>
@@ -56,7 +56,7 @@ function Testimonial() {
                   className="w-20 h-20 rounded-full bg-gray-500"
                 />
                 <blockquote className="max-w-lg text-lg italic font-medium text-center">
-                  Thrilled with my purchase from Vix Art Villa. The artwork
+                  Thrilled with my purchase from Vix Art Studio. The artwork
                   exceeded my expectations. Highly recommend for art enthusiasts
                   and collectors!
                 </blockquote>
@@ -78,7 +78,7 @@ function Testimonial() {
                   className="w-20 h-20 rounded-full bg-gray-500"
                 />
                 <blockquote className="max-w-lg text-lg italic font-medium text-center">
-                  Vix Art Villa is a treasure trove of artistic inspiration. I
+                  Vix Art Studio is a treasure trove of artistic inspiration. I
                   bought a sculpture that adds elegance to my home. Fantastic
                   quality and customer care!
                 </blockquote>

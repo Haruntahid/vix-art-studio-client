@@ -10,6 +10,7 @@ import MyArtList from "../Pages/MyArtList";
 import CraftDetails from "../components/CraftDetails";
 import UpdateCraft from "../components/UpdateCraft";
 import ErrorPage from "../Pages/ErrorPage";
+import SingleCategory from "../components/SingleCategory";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,12 @@ export const router = createBrowserRouter([
         path: "/all-craft",
         element: <AllArtAndCraft />,
         loader: () => fetch("http://localhost:5000/crafts"),
+      },
+      {
+        path: "/category/:name",
+        element: <SingleCategory />,
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/subcategory/${params.name}`),
       },
       {
         path: "/add-craft",

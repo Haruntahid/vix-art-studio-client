@@ -70,7 +70,6 @@ function AddCraft() {
           });
           form.reset();
         }
-        console.log(data);
       });
   };
 
@@ -131,12 +130,30 @@ function AddCraft() {
           <div className="flex gap-2 lg:gap-5">
             <div className="w-1/2">
               <label className="text-white block mb-2">Subcategory Name:</label>
-              <input
-                placeholder="Subcategory Name"
-                type="text"
+              <select
+                id="subcategory_name"
                 name="subcategory_name"
-                className="input input-bordered w-full"
-              />
+                className="block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500"
+              >
+                <option value="Landscape Painting" className="py-2">
+                  Landscape Painting
+                </option>
+                <option value="Portrait Drawing" className="py-2">
+                  Portrait Drawing
+                </option>
+                <option value="Watercolour Painting" className="py-2">
+                  Watercolour Painting
+                </option>
+                <option value="Oil Painting" className="py-2">
+                  Oil Painting
+                </option>
+                <option value="Charcoal Sketching" className="py-2">
+                  Charcoal Sketching
+                </option>
+                <option value="Cartoon Drawing" className="py-2">
+                  Cartoon Drawing
+                </option>
+              </select>
             </div>
             <div className="w-1/2">
               <label className="text-white block mb-2">Price:</label>

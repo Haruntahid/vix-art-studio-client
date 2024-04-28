@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext, useEffect, useState } from "react";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 function Navbar() {
   const [theme, setTheme] = useState(
@@ -143,16 +145,18 @@ function Navbar() {
             </label>
             <div>
               <div className="mr-5">
-                <div
-                  className="tooltip tooltip-left"
-                  data-tip={user?.displayName}
+                <a
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content={user?.displayName}
+                  data-tooltip-place="bottom"
                 >
                   <img
                     className="w-14 h-14 rounded-full"
                     src={user?.photoURL}
                     alt=""
                   />
-                </div>
+                </a>
+                <Tooltip id="my-tooltip" />
               </div>
             </div>
             <div className="hidden lg:block">
