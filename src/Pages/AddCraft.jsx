@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 function AddCraft() {
   const { user } = useContext(AuthContext);
@@ -20,6 +21,23 @@ function AddCraft() {
     const stockStatus = form.stockStatus.value;
     const email = form.email.value;
     const name = form.name.value;
+
+    if (
+      !name ||
+      !photo ||
+      !item_name ||
+      !subcategory_name ||
+      !short_description ||
+      !price ||
+      !rating ||
+      !customization ||
+      !processing_time ||
+      !stockStatus ||
+      !email
+    ) {
+      toast.error("Please Fill all the data");
+      return;
+    }
 
     const addCraft = {
       name,

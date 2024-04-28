@@ -9,11 +9,13 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MyArtList from "../Pages/MyArtList";
 import CraftDetails from "../components/CraftDetails";
 import UpdateCraft from "../components/UpdateCraft";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
