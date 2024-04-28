@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 function CraftDetails() {
   const loaderData = useLoaderData();
   const {
+    name,
     photo,
     item_name,
     subcategory_name,
@@ -70,8 +71,12 @@ function CraftDetails() {
             <div className="divider mt-8">
               <p className="text-4xl font-bold text-center">Artist Info</p>
             </div>
-
-            <h2>Email : {email}</h2>
+            <h2 className="text-xl text-gray-400 my-3">
+              <span className="font-semibold text-black">Name :</span> {name}
+            </h2>
+            <h2 className="text-xl text-gray-400">
+              <span className="font-semibold text-black">Email :</span> {email}
+            </h2>
             <div className="divider"></div>
             <h2 className="text-2xl text-gray-400">
               <span className="font-semibold text-black">Description :</span>{" "}
