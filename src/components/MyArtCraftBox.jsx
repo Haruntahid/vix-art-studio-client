@@ -64,6 +64,9 @@ function MyArtCraftBox({ craft, crafts, setCrafts }) {
           <p>Customization: {customization}</p>
           <p>Stock Status: {stockStatus}</p>
           <div className="card-actions">
+            <Link to={`/craft/${_id}`} className="btn btn-accent">
+              View
+            </Link>
             <Link to={`/update/${_id}`} className="btn btn-primary">
               Update
             </Link>

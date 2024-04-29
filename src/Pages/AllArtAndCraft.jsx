@@ -3,7 +3,7 @@ import CraftCardBox from "../components/CraftCardBox";
 
 function AllArtAndCraft() {
   const crafts = useLoaderData();
-  console.log(crafts);
+  // console.log(crafts);
   return (
     <>
       <div className="container mx-auto">

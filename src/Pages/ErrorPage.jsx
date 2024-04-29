@@ -7,7 +7,7 @@ function ErrorPage() {
         <div className="flex flex-col items-center justify-center h-screen">
           <img
             className="w-full lg:w-[50%] max-w-full"
-            src="https://static.vecteezy.com/system/resources/previews/005/883/254/original/page-not-found-404-error-concept-illustration-free-vector.jpg"
+            src="https://i.ibb.co/DDBngj0/page-not-found-404-error-concept-illustration-free-vector-removebg-preview.png"
             alt=""
           />
           <Link className="btn btn-accent mt-8" to={"/"}>

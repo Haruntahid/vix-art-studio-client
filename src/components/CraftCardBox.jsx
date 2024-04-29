@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function CraftCardBox({ craft }) {
-  console.log(craft);
+  // console.log(craft);
   const {
     _id,
     photo,
