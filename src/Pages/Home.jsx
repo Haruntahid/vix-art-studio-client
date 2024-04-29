@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import CraftItems from "../components/CraftItems";
+import GetInTouch from "../components/GetInTouch";
 import Testimonial from "../components/Testimonial";
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
       <Banner />
       <CraftItems />
       <Testimonial />
+      <GetInTouch />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CraftCart from "./CraftCart";
 import { VscTriangleRight } from "react-icons/vsc";
 
@@ -18,7 +18,7 @@ function SingleCategory() {
         <div className="text-xl lg:text-2xl font-bold mt-8 ">
           <ul className="flex items-center">
             <li>
-              <a>Category</a>
+              <Link to={"/"}>Category</Link>
             </li>
             <li className="mx-4">
               <VscTriangleRight size={18} />
