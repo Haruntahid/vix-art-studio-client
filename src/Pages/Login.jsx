@@ -10,7 +10,8 @@ import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 function Login() {
-  const { loginUser, googleLogin, setUser } = useContext(AuthContext);
+  const { loginUser, googleLogin, setUser, githubLogin } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -58,6 +59,15 @@ function Login() {
   //   google login
   const handelGoogleLogin = () => {
     googleLogin().then((result) => {
+      setUser(result.user);
+      navigate(location?.state ? location.state : "/");
+      toast.success("Log in successfully");
+    });
+  };
+
+  // github login
+  const handelGithubLogin = () => {
+    githubLogin().then((result) => {
       setUser(result.user);
       navigate(location?.state ? location.state : "/");
       toast.success("Log in successfully");
@@ -124,7 +134,11 @@ function Login() {
             <button onClick={handelGoogleLogin} className="p-3 rounded-sm">
               <FaGoogle size={25} />
             </button>
-            <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+            <button
+              onClick={handelGithubLogin}
+              aria-label="Log in with GitHub"
+              className="p-3 rounded-sm"
+            >
               <FaGithub size={25} />
             </button>
           </div>
