@@ -14,8 +14,8 @@ function SingleCategory() {
   }, [name]);
   return (
     <>
-      <div className="container mx-auto">
-        <div className="text-2xl font-bold mt-8">
+      <div className="container mx-auto p-2 lg:p-0">
+        <div className="text-xl lg:text-2xl font-bold mt-8 ">
           <ul className="flex items-center">
             <li>
               <a>Category</a>

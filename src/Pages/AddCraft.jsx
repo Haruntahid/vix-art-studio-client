@@ -129,7 +129,7 @@ function AddCraft() {
           {/* row 2 */}
           <div className="flex gap-2 lg:gap-5">
             <div className="w-1/2">
-              <label className="text-white block mb-2">Subcategory Name:</label>
+              <label className="text-white block mb-2">Category Name:</label>
               <select
                 id="subcategory_name"
                 name="subcategory_name"

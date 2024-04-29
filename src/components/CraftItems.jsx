@@ -13,7 +13,7 @@ function CraftItems() {
 
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto p-2 lg:p-0">
         <h2 className="text-center text-3xl my-5 lg:my-10 lg:text-5xl font-bold">
           Select a Category{" "}
           <span className="text-rose-500">
