@@ -15,8 +15,11 @@ function CategoryCart({ category }) {
           <h2 className="card-title">Category Name: {name}</h2>
           <p>{origins}</p>
           <div className="card-actions justify-center">
-            <Link to={`/category/${name}`} className="btn mt-5  btn-primary">
-              View Details
+            <Link
+              to={`/category/${name}`}
+              className="btn mt-5 w-full  btn-primary"
+            >
+              View Items
             </Link>
           </div>
         </div>

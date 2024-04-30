@@ -21,6 +21,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("https://vix-art-studio.vercel.app/category"),
       },
       {
         path: "/login",
@@ -38,8 +39,10 @@ export const router = createBrowserRouter([
       {
         path: "/category/:name",
         element: <SingleCategory />,
-        // loader: ({ params }) =>
-        //   fetch(`https://vix-art-studio.vercel.app/subcategory/${params.name}`),
+        loader: ({ params }) =>
+          fetch(
+            `https://vix-art-studio.vercel.app/crafts/subcategory/${params.name}`
+          ),
       },
       {
         path: "/add-craft",

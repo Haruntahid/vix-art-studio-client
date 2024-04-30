@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import CraftCart from "./CraftCart";
 import { VscTriangleRight } from "react-icons/vsc";
 
 function SingleCategory() {
   const { name } = useParams();
-  console.log(name);
-  const [crafts, setCrafts] = useState([]);
-  useEffect(() => {
-    fetch(`https://vix-art-studio.vercel.app/crafts/subcategory/${name}`)
-      .then((res) => res.json())
-      .then((data) => setCrafts(data));
-  }, [name]);
+  const crafts = useLoaderData();
   return (
     <>
       <div className="container mx-auto p-2 lg:p-0">

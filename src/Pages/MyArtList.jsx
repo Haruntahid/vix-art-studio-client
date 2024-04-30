@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyArtCraftBox from "../components/MyArtCraftBox";
+import { useLoaderData } from "react-router-dom";
 
 function MyArtList() {
   const { user } = useContext(AuthContext);
@@ -8,6 +9,9 @@ function MyArtList() {
   const [crafts, setCrafts] = useState([]);
   const [filterOption, setFilterOption] = useState("all");
   const [isOpen, setIsOpen] = useState(false);
+
+  const data = useLoaderData();
+  console.log(data);
 
   // handle dropdown btn
   const toggleDropdown = () => {
@@ -36,7 +40,7 @@ function MyArtList() {
     <>
       <div className="container mx-auto min-h-[70vh] relative">
         <h2 className="text-3xl lg:text-6xl text-amber-900 font-bold text-center my-5 lg:my-10 ">
-          My Total Art & Crafts: {crafts.length}
+          My Total Art & Crafts
         </h2>
 
         {crafts.length > 0 ? (

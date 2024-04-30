@@ -27,7 +27,7 @@ function Testimonial() {
         <SwiperSlide>
           <section className="p-6">
             <div className="container mx-auto">
-              <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 bg-gray-900 text-gray-100">
+              <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 bg-rose-500 text-gray-100">
                 <img
                   src="https://lh3.googleusercontent.com/a/ACg8ocJr-PUA6ESvMGAHH-Q3ZZAgDgOzSxOn6gKTsACTXMXEJ_MFp-Dvhw=s96-c"
                   alt=""
@@ -38,7 +38,7 @@ function Testimonial() {
                   stunning and arrived beautifully packaged. Thank you for a
                   delightful shopping experience!
                 </blockquote>
-                <div className="text-center text-gray-400">
+                <div className="text-center text-gray-700">
                   <p>Harun Tahid</p>
                   <p>CEO of Company Vix Tech</p>
                 </div>
@@ -49,7 +49,7 @@ function Testimonial() {
         <SwiperSlide>
           <section className="p-6">
             <div className="container mx-auto">
-              <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 bg-gray-900 text-gray-100">
+              <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 bg-rose-500 text-gray-100">
                 <img
                   src="https://lh3.googleusercontent.com/a/ACg8ocLrLWXv68-baQS9BdrCgBPVtDq3BAkNCRIvQK0dXnGsVG3Oimk=s96-c"
                   alt=""
@@ -60,7 +60,7 @@ function Testimonial() {
                   exceeded my expectations. Highly recommend for art enthusiasts
                   and collectors!
                 </blockquote>
-                <div className="text-center text-gray-400">
+                <div className="text-center text-gray-700">
                   <p>Hassnin Rahi</p>
                   <p>CTO of Company Tech Giant</p>
                 </div>
@@ -71,7 +71,7 @@ function Testimonial() {
         <SwiperSlide>
           <section className="p-6">
             <div className="container mx-auto">
-              <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 bg-gray-900 text-gray-100">
+              <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 bg-rose-500 text-gray-100">
                 <img
                   src="https://source.unsplash.com/random/100x100?4"
                   alt=""
@@ -82,7 +82,7 @@ function Testimonial() {
                   bought a sculpture that adds elegance to my home. Fantastic
                   quality and customer care!
                 </blockquote>
-                <div className="text-center text-gray-400">
+                <div className="text-center text-gray-700">
                   <p>Leroy Jenkins</p>
                   <p>Founder Art Villa</p>
                 </div>

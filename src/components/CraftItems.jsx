@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import CategoryCart from "./CategoryCart";
+import { useLoaderData } from "react-router-dom";
 
 function CraftItems() {
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    fetch("https://vix-art-studio.vercel.app/category")
-      .then((res) => res.json())
-      .then((data) => setCategories(data));
-  }, []);
+  const categorie = useLoaderData();
 
   return (
     <>
@@ -35,7 +29,7 @@ function CraftItems() {
           </span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mt-16">
-          {categories.map((category) => (
+          {categorie.map((category) => (
             <CategoryCart key={category._id} category={category} />
           ))}
         </div>
