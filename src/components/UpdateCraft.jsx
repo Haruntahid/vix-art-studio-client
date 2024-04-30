@@ -56,7 +56,7 @@ function UpdateCraft() {
       stockStatus,
     };
 
-    fetch(`http://localhost:5000/craft/${_id}`, {
+    fetch(`https://vix-art-studio.vercel.app/craft/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

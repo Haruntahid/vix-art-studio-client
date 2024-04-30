@@ -53,7 +53,7 @@ function AddCraft() {
       email,
     };
 
-    fetch("http://localhost:5000/crafts", {
+    fetch("https://vix-art-studio.vercel.app/crafts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

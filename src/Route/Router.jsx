@@ -33,13 +33,13 @@ export const router = createBrowserRouter([
       {
         path: "/all-craft",
         element: <AllArtAndCraft />,
-        loader: () => fetch("http://localhost:5000/crafts"),
+        loader: () => fetch("https://vix-art-studio.vercel.app/crafts"),
       },
       {
         path: "/category/:name",
         element: <SingleCategory />,
         // loader: ({ params }) =>
-        //   fetch(`http://localhost:5000/subcategory/${params.name}`),
+        //   fetch(`https://vix-art-studio.vercel.app/subcategory/${params.name}`),
       },
       {
         path: "/add-craft",
@@ -65,7 +65,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/craft/${params.id}`),
+          fetch(`https://vix-art-studio.vercel.app/craft/${params.id}`),
       },
       {
         path: "/update/:id",
@@ -75,7 +75,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/craft/${params.id}`),
+          fetch(`https://vix-art-studio.vercel.app/craft/${params.id}`),
       },
     ],
   },

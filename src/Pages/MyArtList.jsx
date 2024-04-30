@@ -15,7 +15,7 @@ function MyArtList() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/crafts/${email}`)
+    fetch(`https://vix-art-studio.vercel.app/crafts/${email}`)
       .then((res) => res.json())
       .then((data) => setCrafts(data));
   }, [email]);

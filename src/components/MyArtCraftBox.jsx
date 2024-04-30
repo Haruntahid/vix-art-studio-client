@@ -28,7 +28,7 @@ function MyArtCraftBox({ craft, crafts, setCrafts }) {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/crafts/${_id}`, {
+        fetch(`https://vix-art-studio.vercel.app/crafts/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

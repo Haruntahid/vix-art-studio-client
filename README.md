@@ -1,6 +1,6 @@
 # Vix Art Studio
 
-[Live Site](https://vix-art-studio.web.app/) - https://vix-villa.web.app/
+[Live Site](https://vix-art-studio.web.app/) - https://vix-art-studio.web.app/
 
 ## Website Category
 

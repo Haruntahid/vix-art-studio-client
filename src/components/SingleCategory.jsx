@@ -8,7 +8,7 @@ function SingleCategory() {
   console.log(name);
   const [crafts, setCrafts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/crafts/subcategory/${name}`)
+    fetch(`https://vix-art-studio.vercel.app/crafts/subcategory/${name}`)
       .then((res) => res.json())
       .then((data) => setCrafts(data));
   }, [name]);
